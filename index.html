@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/ab4a2fbe8e.JavaScript" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav id="navbar">
+    <header>
+      <h2>JS Tutorial</h2>
+    </header>
+    <ul>
+      <li><a class="nav-link" href="#JavaScript_Introduction">JavaScript Introduction</a></li>
+      <li><a class="nav-link" href="#JavaScript_where_to">JavaScript Where to </a></li>
+      <li><a class="nav-link" href="#JavaScript_output">JavaScript Output</a></li>
+      <li><a class="nav-link" href="#JavaScript_statements">JavaScript Statements</a></li>
+      <li><a class="nav-link" href="#JavaScript_syntax">JavaScript Syntax</a></li>
+      <li><a class="nav-link" href="#JavaScript_comments">JavaScript Comments</a></li>
+      <li><a class="nav-link" href="#JavaScript_variables">JavaScript Variables</a></li>
+      <li><a class="nav-link" href="#JavaScript_let">JavaScript Let</a></li>
+      <li><a class="nav-link" href="#JavaScript_const">JavaScript Const</a></li>
+      <li><a class="nav-link" href="#JavaScript_operators">JavaScript Operators</a></li>
+      <li><a class="nav-link" href="#JavaScript_arithmetic">JavaScript Arithmetic</a></li>
+      <li><a class="nav-link" href="#JavaScript_assignment">JavaScript Assignment</a></li>
+      <li><a class="nav-link" href="#JavaScript_data_types">JavaScript Data Types</a></li>
+      <li><a class="nav-link" href="#JavaScript_functions">JavaScript Functions</a></li>
+      <li><a class="nav-link" href="#JavaScript_objects">JavaScript Objects</a></li>
+      <li><a class="nav-link" href="#JavaScript_events">JavaScript Events</a></li>
+      <li><a class="nav-link" href="#JavaScript_strings">JavaScript Strings</a></li>
+      <li><a class="nav-link" href="#JavaScript_string_methods">JavaScript String Methods</a></li>
+      <li id="last-item"><a class="nav-link" href="#JavaScript_string_search">JavaScript String Search</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <div id="back-to-top">
+      <a href="#main-doc">
+        <i class="fas fa-angle-double-up"></i>
+      </a>
+    </div>
+    <section class="main-section" id="JavaScript_Introduction">
+      <header>
+        <h1>JavaScript Introduction</h1>
+      </header>
+      <h2>JavaScript Can Change HTML Content</h2>
+      <p>One of many JavaScript HTML methods is <span><code>getElementById()</code></span>.</p>
+      <p>The example below "finds" an HTML element (with id="demo"), and changes the element content (innerHTML) to "Hello JavaScript":
+      </p>
+      <div>
+        <code>
+          document.getElementById("demo").innerHTML = "Hello JavaScript";
+        </code>
+      </div>
+      <p>JavaScript accepts both double and single quotes:</p>
+      <div>
+        <code>
+          document.getElementById('demo').innerHTML = 'Hello JavaScript';
+        </code>
+      </div>
+      <h2>JavaScript Can Change HTML Attribute Values</h2>
+      <h2>JavaScript Can Change HTML Styles (CSS) </h2>
+      <p>Changing the style of an HTML element, is a variant of changing an HTML attribute:</p>
+      <div>
+        <code>
+          document.getElementById("demo").style.fontSize = "35px";
+        </code>
+      </div>
+      <h2>JavaScript Can Hide HTML Elements</h2>
+      <p>Hiding HTML elements can be done by changing the <span><code>display</code></span> style:</p>
+      <div>
+        <code>
+          document.getElementById("demo").style.display = "none";
+        </code>
+      </div>
+      <h2>JavaScript Can Show HTML Elements</h2>
+      <p>Showing hidden HTML elements can also be done by changing the <span><code>display</code></span> style:</p>
+      <div>
+        <code>
+          document.getElementById("demo").style.display = "block";
+        </code>
+      </div>
+
+    </section>
+    <section class="main-section" id="JavaScript_where_to">
+      <header>
+        <h1>JavaScript Where To</h1>
+      </header>
+      <h2>The &lt;script&gt; Tag</h2>
+      <p>In HTML, JavaScript code is inserted between <span><code>script</code></span> and <span><code> /script</code></span> tags.</p>
+      <div>
+        <code>
+          &lt;script&gt;
+            document.getElementById("demo").innerHTML = "My First JavaScript";
+          &lt;/script&gt;
+        </code>
+      </div>
+      <h2>JavaScript Functions and Events</h2>
+      <p>A JavaScript <span><code>function</code></span> is a block of JavaScript code, that can be executed when "called" for.</p>
+      <p>For example, a function ca be called when an <b>event</b> occurs, like when the user clicks a button.</p>
+      <h2>JavaScript in &lt;head&gt; or &lt;body&gt;</h2>
+      <p>You can place any number of scripts in an HTML document.</p>
+      <p>Scripts can be placed in the &lt;body&gt;, or in the &lt;head&gt; section of an HTML page, or in both.</p>
+      <h2>JavaScript in &lt;head&gt;</h2>
+      <p>In this example, a JavaScript <span><code>function</code></span> is placed in the <span><code>&lt;head&gt;</code></span> section of an HTML page.</p>
+      <p>The function is invoked (called) when a button is clicked:</p>
+      <div>
+        <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;HTML&gt;
+          &lt;head&gt;
+          &lt;script&gt;
+          function myFunction() {
+            document.getElementById("demo").innerHTML = "Paragraph changed.";
+          }
+          &lt;/script&gt;
+          &lt;/head&gt;
+          &lt;Body&gt;
+
+          &lt;h2&gt;Demo JavaScript in Head&lt;/h2&gt;
+
+          &lt;p id="demo"&gt;A Paragraph&lt;/p&gt;
+          &lt;button type="button" onclick="myFunction()"&gt;Try it&lt;/button&gt;
+
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </div>
+      <h2>JavaScript in &lt;body&gt;</h2>
+      <p>In this example, a JavaScript <span><code>function</code></span> is placed in the <span><code>&lt;body&gt;</code></span> section of an HTML page.</p>
+      <p>The function is invoked (called) when a button is clicked:</p>
+      <div>
+        <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;HTML&gt;
+          &lt;Body&gt;
+
+          &lt;h2&gt;Demo JavaScript in body&lt;/h2&gt;
+
+          &lt;p id="demo"&gt;A Paragraph&lt;/p&gt;
+
+          &lt;button type="button" onclick="myFunction()"&gt;Try it&lt;/button&gt;
+
+          &lt;script&gt;
+          function myFunction() {
+            document.getElementById("demo").innerHTML = "Paragraph changed.";
+          }
+          &lt;/script&gt;
+
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </div>
+      <h2>External JavaScript</h2>
+      <p>Scripts can also be placed in external files:</p>
+      <div>
+        <code>function myFunction() {
+          document.getElementById("demo").innerHTML = "Paragraph changed.";
+        }</code>
+      </div>
+      <h2>External JavaScript Advantages</h2>
+      <p>Placing scripts in external files has some advantages:</p>
+      <ul>
+        <li>It separates HTML and code</li>
+        <li>It makes HTML and JavaScript easier to read and maintain</li>
+        <li>Cached JavaScript files can speed up page loads</li>
+      </ul>
+      <p>To add several script files to one page - use several script tags:</p>
+      <code></code>
+      <code></code>
+    </section>
+    <section class="main-section" id="JavaScript_output">
+      <header>
+        <h1>JavaScript Output</h1>
+      </header>
+      <h2>JavaScript Display Possibilities</h2>
+      <p>JavaScript can "display" data in different ways:</p>
+      <ul>
+        <li>Writing into an HTML element, using <span><code>innerHTML</code></span>.</li>
+        <li>Writing into the HTML output, using <span><code>document.write()</code></span>.</li>
+        <li>Writing into an alert box, using <span><code>window.alert()</code></span>.</li>
+        <li>Writing into the browser console, using <span><code>console.log()</code></span></li>
+      </ul>
+
+    </section>
+    <section class="main-section" id="JavaScript_statements">
+      <header>
+        <h1>JavaScript Statements</h1>
+      </header>
+      <p>Example</p>
+      <div>
+        <code>
+          let x, y, z;    // Statement 1
+          x = 5;          // Statement 2
+          y = 6;          // Statement 3
+          z = x + y;      // Statement 4
+        </code>
+      </div>
+      <h2>JavaScript Programs</h2>
+      <p>A <b>computer program</b> is a list of "instructions" to be "executed" by a computer.</p>
+      <p>In a programming language, these programming instructions are called <b>statements.</b></p>
+      <p>A <b>JavaScript program</b> is a list of programming <b>statements.</b></p>
+    </section>
+    <section class="main-section" id="JavaScript_syntax">
+      <header>
+        <h1>JavaScript Syntax</h1>
+      </header>
+      <p>JavaScript syntax is the set of rules, how JavaScript programs are constructed:</p>
+      <div>
+        <code>
+          // How to create variables:
+          var x;
+          let y;
+
+          // How to use variables:
+          x = 5;
+          y = 6;
+          let z = x + y;
+        </code>
+      </div>
+      <h2>JavaScript Values</h2>
+      <p>The JavaScript syntax defines two types of values:</p>
+      <ul>
+        <li>Fixed values</li>
+        <li>Variable values</li>
+        <p>Fixed values are called <b>Literals.</b></p>
+        <p>Variable values are called <b>Variables</b></p>
+      </ul>
+    </section>
+    <section class="main-section" id="JavaScript_comments">
+      <header>
+        <h1>JavaScript Comments</h1>
+      </header>
+      <p>JavaScript comments can be used to explain JavaScript code, and to make it more readable.</p>
+      <p>JavaScript comments can also be used to divvent execution, when testing alternative code.</p>
+      <h2>Single Line Comments</h2>
+      <p>Single line comments start with <span><code>//</code></span>.</p>
+      <p>Any text between <span><code>//</code></span> and the end of the line will be ignored by JavaScript (will not be executed).</p>
+      <p>This example uses single-line comment before each code line:</p>
+      <div>
+        <code>
+          // Change heading:
+          document.getElementById("myH").innerHTML = "My First Page";
+
+          // Change paragraph:
+          document.getElementById("myP").innerHTML = "My first paragraph.";
+        </code>
+      </div>
+    </section>
+    <section class="main-section" id="JavaScript_variables">
+      <header>
+        <h1>JavaScript Variables</h1>
+      </header>
+      <p>There are four ways to declare a JavaScript variable:</p>
+      <ul>
+        <li>Using <span><code>var</code></span></li>
+        <li>Using <span><code>let</code></span></li>
+        <li>Using <span><code>const</code></span></li>
+        <li>Using nothing</li>
+      </ul>
+      <h2>What are variables</h2>
+      <p>Variables are containers for storing data (storing data values).</p>
+      <p>In this example, <span><code>x</code></span>,<span><code>y</code>, and </span><span><code>z</code></span>, are variables, declared with the <span><code>var</code></span> keyword:</p>
+      <div>
+        <code>
+          var x = 5;
+          var y = 6;
+          var z = x + y;
+        </code>
+      </div>
+    </section>
+    <section class="main-section" id="JavaScript_let">
+      <header>
+        <h1>JavaScript Let</h1>
+      </header>
+      <h2>Cannot be Re declared</h2>
+      <p>VAriables defined with <span><code>let</code></span> cannot be <b>re declared.</b></p>
+      <p>You cannot accidentally redeclare a variable.</p>
+      <p>With <span><code>let</code></span> you can not do this:</p>
+      <div>
+        <code>
+          let x = "John Doe";
+
+          let x = 0;
+
+          // SyntaxError: 'x' has already been declared
+        </code>
+      </div>
+    </section>
+    <section class="main-section" id="JavaScript_const">
+      <header>
+        <h1>JavaScript Const</h1>
+      </header>
+      <h2>Cannot be Reassigned</h2>
+      <p>A <span><code>const</code></span> variable cannot be reassigned:</p>
+      <div>
+        <code>
+          const PI = 3.141592653589793;
+          PI = 3.14;      // This will give an error
+          PI = PI + 10;   // This will also give an error
+        </code>
+      </div>
+    </section>
+    <section class="main-section" id="JavaScript_operators">
+      <header>
+        <h1>JavaScript Operators</h1>
+      </header>
+      <p>The <b>assignment operator (=) assigns a value to a variable.</b></p>
+      <div>
+        <code>
+          let x = 5;         // assign the value 5 to x
+          let y = 2;         // assign the value 2 to y
+          let z = x + y;     // assign the value 7 to z (5 + 2)
+        </code>
+      </div>
+      <p>The <b>addition</b> operator (+) adds numbers:</p>
+      <div>
+        <code>
+          let x = 5;
+          let y = 2;
+          let z = x + y;
+        </code>
+      </div>
+      <p>The <b>multiplication operator (*) multiplies numbers.</b></p>
+      <div>
+        <code>
+          let x = 5;
+          let y = 2;
+          let z = x * y;
+        </code>
+      </div>
+    </section>
+    <section class="main-section" id="JavaScript_arithmetic">
+      <header>
+        <h1>JavaScript Arithmetic</h1>
+      </header>
+      <h2>Arithmetic Operations</h2>
+      <p>A typical arithmetic operation operates on two numbers.</p>
+      <p>The two numbers can be literals:</p>
+      <div>
+        <code>
+          let x = 100 + 50;
+        </code>
+      </div>
+      <p>or variables:</p>
+      <div>
+        <code>
+          let x = a + b;
+        </code>
+      </div>
+    </section>
+    <section class="main-section" id="JavaScript_assignment">
+      <header>
+        <h1>JavaScript Assignment</h1>
+      </header>
+      <h2>
+        Assignment examples
+      </h2>
+      <p>The <span><code>=</code></span> assignment operator assigns a value to a variable.</p>
+      <div>
+        <code>
+          let x = 10;
+        </code>
+      </div>
+      <p>The <span><code>+=</code></span> assignment operator adds a value to a variable.</p>
+      <div>
+        <code>
+          let x = 10;
+          x += 5;
+        </code>
+      </div>
+    </section>
+    <section class="main-section" id="JavaScript_data_types">
+      <header>
+        <h1>JavaScript Data Types</h1>
+      </header>
+      <h2>The Concept of Data Types</h2>
+      <p>In programming, data types is an important concept.</p>
+      <p>To be able to operate on variables, it is important to know something about the type.</p>
+      <p>Without data types, a computer cannot safely solve this:</p>
+      <div>
+        <code>
+          let x = 16 + "Volvo";
+        </code>
+      </div>
+      <p>Does it make any sense to add "Volvo" to sixteen? Will it produce an error or will it produce a result?</p>
+      <p>JavaScript will treat the example above as:</p>
+      <div>
+        <code>
+          let x = "16" + "Volvo";
+        </code>
+      </div>
+      <h2>JavaScript Types are Dynamic</h2>
+      <p>JavaScript has dynamic types. This means that the same variable can be used to hold different data types:</p>
+      <div>
+        <code>
+          let x;           // Now x is undefined
+          x = 5;           // Now x is a Number
+          x = "John";      // Now x is a String
+        </code>
+      </div>
+    </section>
+    <section class="main-section" id="JavaScript_functions">
+      <header>
+        <h1>JavaScript Functions</h1>
+      </header>
+      <p>A JavaScript function is a block of code designed to perform a particular task.</p>
+      <p>A JavaScript function is executed when "something" invokes it (calls it).</p>
+      <div>
+        <code>
+          function myFunction(p1, p2) {
+            return p1 * p2;   // The function returns the product of p1 and p2
+          }
+        </code>
+      </div>
+      <h2>JavaScript Function Syntax</h2>
+      <p>A JavaScript function is defined with the <span><code>function</code></span> keyword, followed by a <b>name</b>, followed by a parentheses <b>()</b>.</p>
+      <p>Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).</p>
+      <p>The parentheses may include parameter names separated by commas:</p>
+      <p><b>(parameter1, parameter2, ...)</b></p>
+      <p>The code to be executed, by the function, is placed inside curly brackets: <b>{}</b></p>
+      <div>
+        <code>
+          function name(parameter1, parameter2, parameter3) {
+            // code to be executed
+          }
+          
+        </code>
+      </div>
+      <p>Function <b>parameters</b> are listed inside the parentheses () in the function definition.</p>
+      <p>Function <b>arguments</b>< are the values received by the function when it is invoked.</p>
+      <p>Inside the function, the arguments (the parameters) behave as local variables.</p>
+    </section>
+    <section class="main-section" id="JavaScript_objects">
+      <header>
+        <h1>JavaScript Objects</h1>
+      </header>
+      <h2>Real Life Objects, Properties, and Methods</h2>
+      <p>In real life, a car is an <b>object</b>.</p>
+      <p>A car has <b>properties</b> like weight and color, and <b>methods</b> like start and stop:</p>
+      <p>You have already learned that JavaScript variables are containers for data values.</p>
+      <p>This code assigns a <b>simple value</b> (Fiat) to a <b>variable</b> names car:</p>
+      <div>
+        <code>
+          let car = "Fiat";
+        </code>
+      </div>
+      <p>Objects are variables too. But objects can contain many values.</p>
+      <p>This code assigns <b>many values</b> (Fiat, 500, white) to a <b>variable</b> named car:</p>
+      <div>
+        <code>
+          const car = {type:"Fiat", model:"500", color:"white"};
+        </code>
+      </div>
+      <p>The values are written as <b>name:value</b> pairs (name and value separated by a colon).</p>
+      <p>It is a common practice to declare objects with the const keyword.</p>
+    </section>
+    <section class="main-section" id="JavaScript_events">
+      <header>
+        <h1>JavaScript Events</h1>
+      </header>
+      <p>HTML events are <b>"things"</b> that happen to HTML elements.</p>
+      <p>When JavaScript is used in HTML pages, JavaScript can <b>"react"</b> on these events.</p>
+      <h2>HTML Events</h2>
+      <p>An HTML event can be something the browser does, or something a user does.</p>
+      <p>Here are some examples of HTML events:</p>
+      <ul>
+        <li>An HTML web page has finished loading</li>
+        <li>An HTML input field was changed</li>
+        <li>An HTML button was clicked</li>
+      </ul>
+      <p>Often, when events happen, you may want to do something.</p>
+      <p>JavaScript lets you execute code when events are detected.</p>
+      <p>HTML allows event handler attributes, <b>with JavaScript code</b>, to be added to HTML elements.</p>
+      <p>With single quotes:</p>
+      <div>
+        <code>
+          &lt;Element event='some JavaScript'&gt;
+        </code>
+      </div>
+      <p>With double quotes:</p>
+      <div>
+        <code>
+          <&lt;Element event="some JavaScript"&gt;
+        </code>
+      </div>
+      <p>In the following example, an <span><code>onclick</code></span> attribute (with code), is added to a <span><code>&lt;button&gt;</code></span> element:</p>
+      <div>
+        <code>
+          &lt;button onclick="document.getElementById('demo').innerHTML = Date()"&gt;The time is?&lt;/button&gt;
+        </code>
+      </div>
+    </section>
+    <section class="main-section" id="JavaScript_strings">
+      <header>
+        <h1>JavaScript Strings</h1>
+      </header>
+      <p>JavaScript strings are for storing and manipulating text.</p>
+      <p>A JavaScript string is zero or more characters written inside quotes.</p>
+      <div>
+        <code>
+          let text = "John Doe";
+        </code>
+      </div>
+      <p>You can use single or double quotes:</p>
+      <div>
+        <code>
+          let carName1 = "Volvo XC60";  // Double quotes
+          let carName2 = 'Volvo XC60';  // Single quotes
+        </code>
+      </div>
+    </section>
+    <section class="main-section" id="JavaScript_string_methods">
+      <header>
+        <h1>JavaScript String Methods</h1>
+      </header>
+      <p>String methods help you to work with strings.</p>
+      <h2>String Methods and Properties</h2>
+      <p>Primitive values, like "John Doe", cannot have properties or methods (because they are not objects).</p>
+      <p>But with JavaScript, methods and properties are also available to primitive values, because JavaScript treats primitive values as objects when executing methods and properties.</p>
+      <h2>JavaScript String Length</h2>
+      <p>The <span><code>length</code></span> property returns the length of a string</p>
+      <div>
+        <code>
+          let txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+          let length = txt.length;
+        </code>
+      </div>
+      <h2>Extracting String Parts</h2>
+      <p>There are 3 methods for extracting a part of a string:</p>
+      <ul>
+        <li><span><code>slice(start, end)</code></span></li>
+        <li><span><code>substring(start, end)</code></span></li>
+        <li><span><code>substr(start, length)</code></span></li>
+      </ul>
+      <h2>JavaScript String slice()</h2>
+      <p><span><code>slice()</code></span> extracts a part of a string and returns the extracted part in a new string.</p>
+      <p>The method takes 2 parameters: the start position, and the end position (end not included).</p>
+      <p>This example slices out a portion of a string from position 7 to position 12 (13-):</p>
+      <div>
+        <code>
+          let str = "Apple, Banana, Kiwi";
+          let part = str.slice(7, 13);
+        </code>
+      </div>
+
+    </section>
+    <section class="main-section" id="JavaScript_string_search">
+      <header>
+        <h1>JavaScript String Search</h1>
+      </header>
+      <h2>JavaScript Search Methods</h2>
+      <ul>
+        <li>String indexOf()</li>
+        <li>String lastIndexOf()</li>
+        <li>String startsWith()</li>
+        <li>String endsWith()</li>
+      </ul>
+      <h2>JavaScript String indexOf()</h2>
+      <p>The <span><code>indexOf()</code></span> method returns the index of (the position of) the <span><code>first</code></span> occurrence of a specified text in a string:</p>
+      <div>
+        <code>
+          let str = "Please locate where 'locate' occurs!";
+          str.indexOf("locate");
+        </code>
+      </div>
+    </section>
+  </main>
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+</html>
